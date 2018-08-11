@@ -47,17 +47,17 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 // Defines the child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'Genesis Sample' );
+define( 'CHILD_THEME_NAME', 'Genesis Sample TBD' );
 define( 'CHILD_THEME_URL', 'https://www.studiopress.com/' );
 define( 'CHILD_THEME_VERSION', '2.6.0' );
 
-add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'genesis_sample_tbd_enqueue_scripts_styles' );
 /**
  * Enqueues scripts and styles.
  *
  * @since 1.0.0
  */
-function genesis_sample_enqueue_scripts_styles() {
+function genesis_sample_tbd_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
 		'genesis-sample-fonts',
@@ -66,6 +66,9 @@ function genesis_sample_enqueue_scripts_styles() {
 		CHILD_THEME_VERSION
 	);
 	wp_enqueue_style( 'dashicons' );
+
+	// Child theme styles
+	wp_enqueue_style( 'genesis-sample-child-style', get_stylesheet_directory_uri(). '/style.css' );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script(
@@ -279,3 +282,106 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+//* Beginning of Custom Edits
+//* Modify the length of post excerpts
+add_filter( 'excerpt_length', 'sp_excerpt_length' );
+function sp_excerpt_length( $length ) {
+	return 38; // pull first 38 words
+}
+
+// Change the footer text
+add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
+function sp_footer_creds_filter( $creds ) {
+	$creds = 'Copyright [footer_copyright] The Budget Diet &middot; OMC V4M LLC<br />Made with <i class="icon ion-heart"></i> in Seattle';
+	return $creds;
+}
+
+// Add Read More Link to Excerpts
+add_filter('excerpt_more', 'get_read_more_link');
+add_filter( 'the_content_more_link', 'get_read_more_link' );
+function get_read_more_link() {
+   return '...&nbsp;<a href="' . get_permalink() . '">Read&nbsp;More&nbsp;></a>';
+}
+
+// Remove Post Info from all but single posts
+function not_single_remove_post_meta() {
+	if (!is_single()) {
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		}
+}
+add_action ( 'genesis_entry_header', 'not_single_remove_post_meta' );
+
+
+// Customize entry meta header
+add_filter( 'genesis_post_info', 'modify_post_info_filter' );
+function modify_post_info_filter( $post_info ) {
+	$post_info = 'By The Budget Diet Team [post_comments] </br> <i>THIS POST MAY CONTAIN AFFILIATE LINKS. PLEASE READ MY <a href="/affiliate-disclosure/">DISCLOSURE</a> FOR MORE INFO.</i>';
+	return $post_info;
+}
+
+// Remove the post entry meta in the entry footer on homepage (requires HTML5 theme support)
+function home_remove_post_meta() {
+	if (is_home()) {
+		remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+		}
+}
+add_action ( 'genesis_entry_header', 'home_remove_post_meta' );
+
+// Customize entry meta footer
+add_filter( 'genesis_post_meta', 'change_post_meta_filter' );
+function change_post_meta_filter( $post_meta ) {
+	$post_meta = '[post_categories]';
+	return $post_meta;
+}
+
+// Registering 3rd Menu
+function register_additional_menu() {
+	register_nav_menu( 'third-menu' ,__( 'Third Navigation Menu' ));
+}
+
+add_action( 'init', 'register_additional_menu' );
+add_action( 'genesis_after_header', 'add_third_nav_genesis' ); 
+	
+function add_third_nav_genesis() {
+	wp_nav_menu( array( 'theme_location' => 'third-menu', 'container_class' => 'genesis-nav-menu thrid-nav-menu' ) );
+}
+
+// Register widget area for Front Page Hero.
+genesis_register_sidebar( array(
+	'id'          => 'front-page-top',
+	'name'        => __( 'Front Page Top', 'genesis-sample-tbd' ),
+	'description' => __( 'This is a widget that goes on the front page.', 'genesis-sample-tbd' ),
+) );
+
+// Moves Title and Description on Archive, Taxonomy, Category, Tag
+remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
+add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description' );
+
+// Enqueue Ionicons from ionicons.com
+add_action( 'wp_enqueue_scripts', 'sp_enqueue_ionicons' );
+function sp_enqueue_ionicons() {
+	wp_enqueue_style( 'ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), CHILD_THEME_VERSION );
+}
+
+// Add Google Tag Manager code in <head>
+add_action( 'wp_head', 'sk_google_tag_manager1' );
+function sk_google_tag_manager1() { ?>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KHZQ34S');</script>
+	<!-- End Google Tag Manager -->
+	<meta name="google-site-verification" content="vwos7LJ7IahS3wMxYTQYJOUENChXPvRXibS6hJ6d2d8" />
+<?php }
+
+// Add Google Tag Manager second part code immediately below opening <body> tag
+add_action( 'genesis_before', 'sk_google_tag_manager2' );
+function sk_google_tag_manager2() { ?>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHZQ34S"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<?php }

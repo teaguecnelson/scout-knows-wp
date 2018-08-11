@@ -1,0 +1,39 @@
+.archive-description {
+  background-color: #1e417a;
+  padding: 3rem;
+  color: #fff;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #0073e5;
+      text-decoration: underline;
+    }
+  }
+}
+
+.category-desc {
+  @include makeRow($no-padding: true);
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.archive-title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+  color: #fff;
+}
+
+.category-desc-text {
+  @include makeColumn($size: 12, $offset: 0);
+  @include makeColumn(md, $size: 6, $offset: 0);
+
+  padding: 1rem 0;
+
+  @include breakpoint($medium) {
+    padding: 0 3rem;
+  }
+}
