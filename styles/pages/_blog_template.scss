@@ -1,0 +1,25 @@
+.page-template-page_blog {
+    .page {
+        background-color: #1e417a;
+        padding: 3rem;
+        color: #fff;
+      
+        a {
+          color: #fff;
+      
+          &:hover {
+            color: #0073e5;
+            text-decoration: underline;
+          }
+        }
+    }
+
+    .entry-title {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 0 2rem;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
