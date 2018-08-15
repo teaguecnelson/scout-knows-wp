@@ -47,4 +47,16 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+  #menu-main li:last-child {
+    background-color: #ff5c5c;
+    border-radius: 5px;
+    padding: 3px 14px;
+    border-color: transparent;
+    border-bottom: 0;
+  }
+
+  #menu-main li:last-child a {
+    color: #fff;
+  }
 }
