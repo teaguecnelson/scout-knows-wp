@@ -293,7 +293,7 @@ function sp_excerpt_length( $length ) {
 // Change the footer text
 add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
 function sp_footer_creds_filter( $creds ) {
-	$creds = 'Copyright [footer_copyright] The Budget Diet &middot; OMC V4M LLC<br />Made with <i class="icon ion-heart"></i> in Seattle';
+	$creds = 'Copyright [footer_copyright] Create Your Start &middot; Ribbiter Media LLC<br />Made with <i class="icon ion-heart"></i> in Seattle';
 	return $creds;
 }
 
@@ -316,7 +316,7 @@ add_action ( 'genesis_entry_header', 'not_single_remove_post_meta' );
 // Customize entry meta header
 add_filter( 'genesis_post_info', 'modify_post_info_filter' );
 function modify_post_info_filter( $post_info ) {
-	$post_info = 'By [post_author] [post_comments] </br> <i>THIS POST MAY CONTAIN AFFILIATE LINKS. PLEASE READ MY <a href="/affiliate-disclosure/">DISCLOSURE</a> FOR MORE INFO.</i>';
+	$post_info = 'By The Create Your Start Team [post_comments] </br> <i>THIS POST MAY CONTAIN AFFILIATE LINKS. PLEASE READ MY <a href="/affiliate-disclosure/">DISCLOSURE</a> FOR MORE INFO.</i>';
 	return $post_info;
 }
 

@@ -1698,7 +1698,7 @@ h6 {
   display: none;
   margin-top: 83px;
   height: 45px;
-  background-color: #2990b0; }
+  background-color: #006db3; }
   @media only screen and (min-width: 976px) {
     .thrid-nav-menu {
       display: block; } }
@@ -1745,7 +1745,7 @@ h6 {
   padding: 29.5px 0; }
 
 .site-header {
-  background-color: #cbf4ff; }
+  background-color: #63ccff; }
 
 @media only screen and (min-width: 976px) {
   .site-header {
@@ -1788,13 +1788,14 @@ h6 {
 .home .site-tagline {
   text-align: center;
   margin: 4rem auto 2rem;
-  font-size: 58px;
+  font-size: 38px;
   font-weight: 800;
   max-width: 700px;
   padding: 0 0.475rem; }
   @media only screen and (min-width: 976px) {
     .home .site-tagline {
-      margin: 5.5rem auto 2rem; } }
+      margin: 5.5rem auto 2rem;
+      font-size: 58px; } }
 
 .home .site-sub-tagline {
   text-align: center;
