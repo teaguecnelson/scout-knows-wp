@@ -1698,7 +1698,7 @@ h6 {
   display: none;
   margin-top: 83px;
   height: 45px;
-  background-color: #006db3; }
+  background-color: #328097; }
   @media only screen and (min-width: 976px) {
     .thrid-nav-menu {
       display: block; } }
@@ -1745,7 +1745,7 @@ h6 {
   padding: 29.5px 0; }
 
 .site-header {
-  background-color: #63ccff; }
+  background-color: #A7D6E6; }
 
 @media only screen and (min-width: 976px) {
   .site-header {
@@ -1763,7 +1763,7 @@ h6 {
     letter-spacing: 1px;
     text-transform: uppercase; }
   #menu-main li:last-child {
-    background-color: #ff5c5c;
+    background-color: #EE5B34;
     border-radius: 5px;
     padding: 3px 14px;
     border-color: transparent;
