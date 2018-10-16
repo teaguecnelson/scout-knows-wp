@@ -1,5 +1,5 @@
 /*
-	Theme Name: Genesis Sample SB
+	Theme Name: Genesis Sample SK
 	Theme URI: http://www.yourdomain.com/
 	Description: This is a Genesis child theme modified from the Genesis Sample Theme.
 	Author: Teague Nelson
@@ -7,7 +7,7 @@
 	Version: 1.0.0
 	
 	Tags: custom-background, custom-header, featured-images, threaded-comments, two-columns
-	Text-Domain: genesis-sample-sb
+	Text-Domain: genesis-sample-sk
 	Template: genesis
 	Template Version: 1.7.1
 	License: GNU General Public License v2.0
@@ -1693,32 +1693,21 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem; }
 
-@media only screen and (min-width: 976px) {
-  img.alignright {
-    padding-left: 20px !important; } }
-
-@media only screen and (min-width: 976px) {
-  img.alignleft {
-    padding-right: 20px !important; } }
-
 /** Molecules */
 .thrid-nav-menu {
-  height: 15px;
+  display: none;
+  margin-top: 83px;
+  height: 45px;
   background-color: #F0CE5C; }
   @media only screen and (min-width: 976px) {
     .thrid-nav-menu {
-      margin-top: 83px;
-      height: 45px; } }
+      display: block; } }
 
 #menu-3rd-menu {
-  display: none;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
   height: 45px; }
-  @media only screen and (min-width: 976px) {
-    #menu-3rd-menu {
-      display: block; } }
 
 #menu-3rd-menu li {
   line-height: 1.5;
@@ -1733,10 +1722,6 @@ h6 {
   padding: 12px 16px;
   display: inline-block;
   text-transform: uppercase; }
-
-@media only screen and (min-width: 976px) {
-  .hidden-dsktop {
-    display: none !important; } }
 
 /** Organisms */
 .wp-custom-logo .site-container .title-area {
@@ -1792,12 +1777,6 @@ h6 {
 .wc-comment-date {
   color: #484848; }
 
-#wc-textarea-0_0 {
-  background-color: #fff; }
-
-#wpcomm .wpdiscuz-front-actions .wpdiscuz-sbs-wrap span {
-  color: #000; }
-
 .sidebar-primary {
   min-width: 300px !important; }
 
@@ -1806,12 +1785,6 @@ h6 {
   @media only screen and (min-width: 976px) {
     #genesis-content {
       padding: 0; } }
-
-.home .sidebar-primary .custom-html-widget {
-  display: none; }
-
-.sidebar-primary .sidebar-about {
-  padding: 1.5rem; }
 
 .home .featured-widget-area {
   max-width: 1140px;
@@ -1916,6 +1889,9 @@ h6 {
   color: #fff;
   font-size: 2rem;
   font-weight: 600; }
+
+.home .site-inner {
+  padding: 4px 30px 0; }
 
 .entry-categories,
 .breadcrumb {

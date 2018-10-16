@@ -293,7 +293,7 @@ function sp_excerpt_length( $length ) {
 // Change the footer text
 add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
 function sp_footer_creds_filter( $creds ) {
-	$creds = 'Copyright [footer_copyright] Create Your Start &middot; Ribbiter Media LLC<br />Made with <i class="icon ion-heart"></i> in Seattle';
+	$creds = 'Copyright [footer_copyright] Scout Knows &middot; Pet Parents Media LLC<br />Made with <i class="icon ion-heart"></i> in Seattle';
 	return $creds;
 }
 

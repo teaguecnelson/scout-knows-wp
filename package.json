@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teaguecnelson/flywheel_first.git"
+    "url": "git+https://github.com/teaguecnelson/scout-knows-wp.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/teaguecnelson/flywheel_first/issues"
+    "url": "https://github.com/teaguecnelson/scout-knows-wp/issues"
   },
-  "homepage": "https://github.com/teaguecnelson/flywheel_first#readme",
+  "homepage": "https://github.com/teaguecnelson/scout-knows-wp#readme",
   "dependencies": {
     "node-sass": "^4.9.3"
   }
