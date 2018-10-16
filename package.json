@@ -1,14 +1,14 @@
 {
-  "name": "genesis-sample-sb",
+  "name": "genesis-sample-sk",
   "version": "1.0.0",
-  "description": "Genesis Sample SB Theme (Start Business)",
+  "description": "Genesis Sample SK Theme (Scout Knows)",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch styles/style.scss -o ../genesis-sample-sb"
+    "scss": "node-sass --watch styles/style.scss -o ../genesis-sample-sk"
   },
   "repository": {
     "type": "git",

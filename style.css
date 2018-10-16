@@ -1693,6 +1693,14 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem; }
 
+@media only screen and (min-width: 976px) {
+  img.alignright {
+    padding-left: 20px !important; } }
+
+@media only screen and (min-width: 976px) {
+  img.alignleft {
+    padding-right: 20px !important; } }
+
 /** Molecules */
 .thrid-nav-menu {
   height: 15px;

@@ -1,5 +1,5 @@
 /*
-	Theme Name: Genesis Sample SB
+	Theme Name: Genesis Sample SK
 	Theme URI: http://www.yourdomain.com/
 	Description: This is a Genesis child theme modified from the Genesis Sample Theme.
 	Author: Teague Nelson
@@ -7,7 +7,7 @@
 	Version: 1.0.0
 	
 	Tags: custom-background, custom-header, featured-images, threaded-comments, two-columns
-	Text-Domain: genesis-sample-sb
+	Text-Domain: genesis-sample-sk
 	Template: genesis
 	Template Version: 1.7.1
 	License: GNU General Public License v2.0
@@ -34,4 +34,5 @@
 /** Pages */
 @import "pages/category";
 @import "pages/blog_template";
+@import "pages/home";
 @import "pages/post";
