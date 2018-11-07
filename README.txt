@@ -4,7 +4,7 @@ This theme was adapted from the Genesis Sample SB (for CYS) Theme on Oct 16, 201
 
 Styling:
 It uses NPM package node-sass (https://www.npmjs.com/package/node-sass) for Sass compiling.
-to run, get into 'genesis-sample-sk' directory and use 'npm run scss' to start compiling watch script.
+to run, get into 'genesis-sam-sk' directory and use 'npm run scss' to start compiling watch script.
 
 NOTE (TO BE FIXED):
 The style.scss file must be saved every time a change is made in any of the scss files in order for the css compiler to run.

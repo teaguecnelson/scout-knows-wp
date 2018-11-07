@@ -1,0 +1,92 @@
+.amazon-product {
+    position: relative;
+      box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+      background-color: #f7f7f7;
+    width: 100%;
+    margin: 0.25rem auto 3.5rem;
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 500px) {
+    .amazon-product {
+      width: 80%;
+    }
+  }
+  
+  .amazon-product-inner-wrapper {
+      background-color: #fefefe;
+      border: 2px solid #dce0e0;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  
+  .amazon-our-pick-banner {
+      position: absolute;
+      left: 0;
+      width: 35%;
+      background-color: #2c98bc;
+      color: #fefefe;
+  }
+  
+  .amazon-our-pick-text {
+      line-height: 1.4rem;
+      margin: 0;
+      padding: 2.6rem 0 0;
+  }
+  
+  .amazon-our-pick-text-single {
+        line-height: 1.4rem;
+      margin: 0;
+      padding: 2.6rem 0;
+  }
+  
+  .amazon-img {
+    width: 72%;
+  }
+  
+  .amazon-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  
+  .amazon-product-inner-wrapper a {
+      text-decoration: none;
+  }
+  
+  .amazon-button {
+           color: #fefefe;
+         background-color: #f16a22;
+         border-color: #f16a22;
+      padding: .5rem;
+      border: 1px solid #f16a22;
+      border-radius: 0;
+      width: 100%;
+      font-size: 1.6rem;
+      cursor: pointer;
+      text-align: center;
+      align-items: flex-start;
+      text-decoration: none;
+      text-rendering: optimizeLegibility;
+      height: auto;
+      margin-bottom: .5rem;
+      white-space: normal;
+      padding: 1rem 2rem;
+      display: list-item;
+      max-width: 60%;
+      margin: auto;
+  }
+  
+  @media screen and (min-width: 500px) {
+    .amazon-button {
+      font-size: 2.1rem;
+    }
+  }
+  
+  .amazon-button:hover {
+           color: #fefefe;
+  }
+  
+  .amazon-description {
+      text-align: left;
+      margin-bottom: 1.5rem;
+  }

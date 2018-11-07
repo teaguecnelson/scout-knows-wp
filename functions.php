@@ -316,7 +316,7 @@ add_action ( 'genesis_entry_header', 'not_single_remove_post_meta' );
 // Customize entry meta header
 add_filter( 'genesis_post_info', 'modify_post_info_filter' );
 function modify_post_info_filter( $post_info ) {
-	$post_info = 'By The Create Your Start Team [post_comments] </br> <i>THIS POST MAY CONTAIN AFFILIATE LINKS. PLEASE READ MY <a href="/affiliate-disclosure/">DISCLOSURE</a> FOR MORE INFO.</i>';
+	$post_info = 'By [post_author] [post_comments] </br> <i>THIS POST MAY CONTAIN AFFILIATE LINKS. PLEASE READ MY <a href="/affiliate-disclosure/">DISCLOSURE</a> FOR MORE INFO.</i>';
 	return $post_info;
 }
 
@@ -354,10 +354,6 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is a widget that goes on the front page.', 'genesis-sample-tbd' ),
 ) );
 
-// Moves Title and Description on Archive, Taxonomy, Category, Tag
-remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
-add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description' );
-
 // Enqueue Ionicons from ionicons.com
 add_action( 'wp_enqueue_scripts', 'sp_enqueue_ionicons' );
 function sp_enqueue_ionicons() {
@@ -385,3 +381,23 @@ function sk_google_tag_manager2() { ?>
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 <?php }
+
+// Add featured image on single post
+add_action( 'genesis_entry_content', 'themeprefix_featured_image', 1 );
+function themeprefix_featured_image() {
+	$image = genesis_get_image( array( // more options here -> genesis/lib/functions/image.php
+			'format'  => 'html',
+			'size'    => 'large',// add in your image size large, medium or thumbnail - for custom see the post
+			'context' => '',
+			'attr'    => array ( 'class' => 'aligncenter' ), // set a default WP image class
+		) );
+	if ( is_singular()) {
+		if ( $image ) {
+			printf( '<div class="featured-image-class">%s</div>', $image ); // wraps the featured image in a div with css class you can control
+		}
+	}
+}
+
+// Moves Title and Description on Archive, Taxonomy, Category, Tag
+remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
+add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description', 20 );

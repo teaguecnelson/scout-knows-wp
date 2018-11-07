@@ -1,0 +1,53 @@
+.home .featured-widget-area {
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.home .featured-widget-area,
+.three-up-module {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.three-up-site-tagline {
+  text-align: center;
+  margin: 4rem auto 2rem;
+  font-size: 38px;
+  font-weight: 800;
+  max-width: 700px;
+  padding: 0 0.475rem;
+
+  @include breakpoint($medium) {
+    margin: 5.5rem auto 2rem;
+    font-size: 58px;
+  }
+}
+
+.three-up-site-sub-tagline {
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.three-up-home-top {
+  @include makeRow($no-padding: false);
+
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include breakpoint($medium) {
+    padding: 0;
+  }
+}
+
+.three-up-top-section {
+  @include makeColumn($size: 12, $offset: 0);
+  @include makeColumn(md, $size: 4, $offset: 0);
+
+  padding: 1rem;
+}
+
+.three-up-top-section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 1.5rem 0 0;
+}

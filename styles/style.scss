@@ -1,5 +1,5 @@
 /*
-	Theme Name: Genesis Sample SK
+	Theme Name: Genesis Sam SK
 	Theme URI: http://www.yourdomain.com/
 	Description: This is a Genesis child theme modified from the Genesis Sample Theme.
 	Author: Teague Nelson
@@ -7,7 +7,7 @@
 	Version: 1.0.0
 	
 	Tags: custom-background, custom-header, featured-images, threaded-comments, two-columns
-	Text-Domain: genesis-sample-sk
+	Text-Domain: genesis-sam-sk
 	Template: genesis
 	Template Version: 1.7.1
 	License: GNU General Public License v2.0
@@ -28,8 +28,9 @@
 @import "organisms/header";
 @import "organisms/comments";
 @import "organisms/sidebar";
-@import "organisms/home_top";
+@import "organisms/three_up_module";
 @import "organisms/footer";
+@import "organisms/amazon_block";
 
 /** Pages */
 @import "pages/category";

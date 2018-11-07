@@ -1,5 +1,5 @@
 /*
-	Theme Name: Genesis Sam SK
+	Theme Name: Genesis Sample SK
 	Theme URI: http://www.yourdomain.com/
 	Description: This is a Genesis child theme modified from the Genesis Sample Theme.
 	Author: Teague Nelson
@@ -7,7 +7,7 @@
 	Version: 1.0.0
 	
 	Tags: custom-background, custom-header, featured-images, threaded-comments, two-columns
-	Text-Domain: genesis-sam-sk
+	Text-Domain: genesis-sample-sk
 	Template: genesis
 	Template Version: 1.7.1
 	License: GNU General Public License v2.0
@@ -63,14 +63,14 @@
 /**
   * Spacing mixin to create uniform margin/padding
   */
-.three-up-home-top, .category-desc, .three-up-top-section, .category-desc-text {
+.home .home-top, .category-desc, .home .top-section, .category-desc-text {
   display: flex;
   display: -webkit-flex; }
 
 /**
   * Row wrapper class, flex box parent.
   */
-.three-up-home-top, .category-desc {
+.home .home-top, .category-desc {
   box-sizing: border-box;
   flex-flow: wrap;
   -webkit-flex-flow: wrap;
@@ -81,15 +81,15 @@
   padding-left: 2rem;
   padding-right: 2rem; }
   @media only screen and (min-width: 976px) {
-    .three-up-home-top, .category-desc {
+    .home .home-top, .category-desc {
       margin-left: -0.75rem;
       margin-right: -0.75rem; } }
   @media only screen and (min-width: 976px) {
-    .three-up-home-top, .category-desc {
+    .home .home-top, .category-desc {
       padding-left: 3rem;
       padding-right: 3rem; } }
 
-.three-up-top-section, .category-desc-text {
+.home .top-section, .category-desc-text {
   box-sizing: border-box;
   flex-direction: column;
   flex-grow: 0;
@@ -100,7 +100,7 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
   @media only screen and (min-width: 976px) {
-    .three-up-top-section, .category-desc-text {
+    .home .top-section, .category-desc-text {
       padding-left: 0.75rem;
       padding-right: 0.75rem; } }
 
@@ -116,16 +116,16 @@
   * Step 1, for each namespace, create the grid-base
   * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
   */
-.three-up-top-section, .category-desc-text {
+.home .top-section, .category-desc-text {
   flex-basis: 100%;
   max-width: 100%;
   -webkit-flex-basis: 100%; }
 
-.three-up-top-section, .category-desc-text {
+.home .top-section, .category-desc-text {
   margin-left: 0%; }
 
 @media only screen and (min-width: 976px) {
-  .three-up-top-section {
+  .home .top-section {
     flex-basis: 33.33333%;
     max-width: 33.33333%;
     -webkit-flex-basis: 33.33333%; }
@@ -133,7 +133,7 @@
     flex-basis: 50%;
     max-width: 50%;
     -webkit-flex-basis: 50%; }
-  .three-up-top-section, .category-desc-text {
+  .home .top-section, .category-desc-text {
     margin-left: 0%; } }
 
 /* Table of Contents
@@ -805,6 +805,7 @@ th:first-child {
 /* Titles
 --------------------------------------------- */
 .archive-description .entry-title,
+.archive-title,
 .author-box-title {
   font-size: 20px;
   font-size: 2rem;
@@ -1692,15 +1693,12 @@ h6 {
   font-size: 16px;
   font-size: 1.6rem; }
 
-.highlight {
-  background-color: yellow; }
-
 /** Molecules */
 .thrid-nav-menu {
   display: none;
   margin-top: 83px;
   height: 45px;
-  background-color: #49A964; }
+  background-color: #F0CE5C; }
   @media only screen and (min-width: 976px) {
     .thrid-nav-menu {
       display: block; } }
@@ -1720,7 +1718,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   line-height: 21px;
-  color: #fff;
+  color: #3D3D3D;
   padding: 12px 16px;
   display: inline-block;
   text-transform: uppercase; }
@@ -1765,11 +1763,10 @@ h6 {
     letter-spacing: 1px;
     text-transform: uppercase; }
   #menu-main li:last-child {
-    background-color: #FF5D5C;
+    background-color: #296F48;
     padding: 3px 14px;
     border-color: transparent;
-    border-bottom: 0;
-    border-radius: 5px; }
+    border-bottom: 0; }
   #menu-main li:last-child a {
     color: #fff; } }
 
@@ -1790,14 +1787,11 @@ h6 {
       padding: 0; } }
 
 .home .featured-widget-area {
+  max-width: 1140px;
+  margin: 0 auto;
   border-bottom: 2px solid #f5f5f5; }
 
-.home .featured-widget-area,
-.three-up-module {
-  max-width: 1140px;
-  margin: 0 auto; }
-
-.three-up-site-tagline {
+.home .site-tagline {
   text-align: center;
   margin: 4rem auto 2rem;
   font-size: 38px;
@@ -1805,29 +1799,28 @@ h6 {
   max-width: 700px;
   padding: 0 0.475rem; }
   @media only screen and (min-width: 976px) {
-    .three-up-site-tagline {
+    .home .site-tagline {
       margin: 5.5rem auto 2rem;
       font-size: 58px; } }
 
-.three-up-site-sub-tagline {
+.home .site-sub-tagline {
   text-align: center;
   padding: 0 0.5rem; }
 
-.three-up-home-top {
+.home .home-top {
   max-width: 100%;
   margin: 0 auto; }
   @media only screen and (min-width: 976px) {
-    .three-up-home-top {
+    .home .home-top {
       padding: 0; } }
 
-.three-up-top-section {
+.home .top-section {
   padding: 1rem; }
 
-.three-up-top-section-title {
+.home .top-section-title {
   text-align: center;
   font-size: 2rem;
-  font-weight: 800;
-  padding: 1.5rem 0 0; }
+  font-weight: 800; }
 
 .footer-widgets,
 .site-footer {
@@ -1851,92 +1844,16 @@ h6 {
 .ion-heart {
   color: #FF0000; }
 
-.amazon-product {
-  position: relative;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  background-color: #f7f7f7;
-  width: 100%;
-  margin: 0.25rem auto 3.5rem;
-  padding: 3rem;
-  text-align: center; }
-
-@media screen and (min-width: 500px) {
-  .amazon-product {
-    width: 80%; } }
-
-.amazon-product-inner-wrapper {
-  background-color: #fefefe;
-  border: 2px solid #dce0e0;
-  padding: 1rem 1rem 2rem 1rem; }
-
-.amazon-our-pick-banner {
-  position: absolute;
-  left: 0;
-  width: 35%;
-  background-color: #2c98bc;
-  color: #fefefe; }
-
-.amazon-our-pick-text {
-  line-height: 1.4rem;
-  margin: 0;
-  padding: 2.6rem 0 0; }
-
-.amazon-our-pick-text-single {
-  line-height: 1.4rem;
-  margin: 0;
-  padding: 2.6rem 0; }
-
-.amazon-img {
-  width: 72%; }
-
-.amazon-title {
-  font-size: 24px;
-  font-size: 2.4rem; }
-
-.amazon-product-inner-wrapper a {
-  text-decoration: none; }
-
-.amazon-button {
-  color: #fefefe;
-  background-color: #f16a22;
-  border-color: #f16a22;
-  padding: .5rem;
-  border: 1px solid #f16a22;
-  border-radius: 0;
-  width: 100%;
-  font-size: 1.6rem;
-  cursor: pointer;
-  text-align: center;
-  align-items: flex-start;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  height: auto;
-  margin-bottom: .5rem;
-  white-space: normal;
-  padding: 1rem 2rem;
-  display: list-item;
-  max-width: 60%;
-  margin: auto; }
-
-@media screen and (min-width: 500px) {
-  .amazon-button {
-    font-size: 2.1rem; } }
-
-.amazon-button:hover {
-  color: #fefefe; }
-
-.amazon-description {
-  text-align: left;
-  margin-bottom: 1.5rem; }
-
 /** Pages */
 .archive-description {
+  background-color: #1e417a;
   padding: 3rem;
-  max-width: 700px;
-  margin: 0 auto; }
-  .archive-description a:hover {
-    color: #0073e5;
-    text-decoration: underline; }
+  color: #fff; }
+  .archive-description a {
+    color: #fff; }
+    .archive-description a:hover {
+      color: #0073e5;
+      text-decoration: underline; }
 
 .category-desc {
   padding: 0;
@@ -1947,34 +1864,13 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 0 2rem;
-  font-size: 2.5rem;
-  text-align: center; }
+  color: #fff; }
 
 .category-desc-text {
   padding: 1rem 0; }
   @media only screen and (min-width: 976px) {
     .category-desc-text {
       padding: 0 3rem; } }
-
-.cat-hero-img img {
-  margin: 0 0 3rem; }
-
-.subcategory-wrapper {
-  width: 100%;
-  background-color: #F2F2F2;
-  padding: 0.25rem 0; }
-
-.three-up-subcat-header {
-  font-size: 2.5rem;
-  padding: 4rem 0 0; }
-
-.three-up-cat-sub-tagline {
-  padding: 0 0.5rem; }
-
-.three-up-cat-all-articles-header {
-  font-size: 2.5rem;
-  text-align: center;
-  padding: 4rem 0 0; }
 
 .page-template-page_blog .page {
   background-color: #1e417a;
