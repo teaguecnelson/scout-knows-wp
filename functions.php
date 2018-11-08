@@ -401,3 +401,21 @@ function themeprefix_featured_image() {
 // Moves Title and Description on Archive, Taxonomy, Category, Tag
 remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
 add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description', 20 );
+
+// Removes Title and Description on Paginated Archive, Taxonomy, Category, Tag Pages
+add_action( 'genesis_after_header', 'sk_taxonomy_title_description' );
+/**
+ * Remove Taxonomy Title and Description on paginated pages.
+ */
+function sk_taxonomy_title_description() {
+    global $wp_query;
+
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+    // if we are on the first page of pagination, abort.
+    if ( 1 == $paged )  {
+        return;
+    }
+
+    remove_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description', 20 );
+}

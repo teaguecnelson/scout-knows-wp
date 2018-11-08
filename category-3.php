@@ -12,7 +12,7 @@ add_action( 'genesis_after_header', 'wpsitesdotnet_category_archives_image');
 */
 function wpsitesdotnet_category_archives_image () {
 if (is_category() && !is_paged() ) {
-echo '<div class="cat-hero-img"><img src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/DOG-SNOW.jpg" alt="dog hiking with a coat on" width="100%" height="300" class="alignright size-full wp-image-38715" /></div>';
+echo '<div class="cat-hero-img"><img src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/Insurancetop.jpg" alt="dog hiking with a coat on" width="100%" height="300" class="alignright size-full wp-image-38715" /></div>';
  
   }
 }
@@ -41,31 +41,28 @@ echo '
 <div class="subcategory-wrapper">
     <div class="three-up-module">
         <h2 class="three-up-subcat-header">
-        FOOD SUBCATEGORIES <i class="icon ion-ios-paw"></i>
+        INSURANCE SUBCATEGORIES <i class="icon ion-ios-paw"></i>
         </h2>
-        <p class="three-up-cat-sub-tagline">
-        Dig in to find the food you need.
-        </p>
         <div class="three-up-home-top">
             <div class="three-up-top-section">
-                <a href="/insurance/compare-plans/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/dog-food.jpg"></a>
+                <a href="/insurance/compare-plans/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/vet.jpg">
                 <h3 class="three-up-top-section-title">
                     Compare Plans
-                </h3>
+                </h3></a>
                 <p>Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog.</p>
             </div>
                 <div class="three-up-top-section">
-                    <a href="/insurance/coverage/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/dogs-at-park.jpg"></a>
+                    <a href="/insurance/coverage/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/coverage.jpg">
                 <h3 class="three-up-top-section-title">
                     Coverage
-                </h3>
+                </h3></a>
                 <p>Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog.</p>
             </div>
                 <div class="three-up-top-section">
-                <a href="/insurance/stories/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/dog-in-basket.jpg"></a>
+                <a href="/insurance/stories/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/stories.jpg">
                 <h3 class="three-up-top-section-title">
                     Stories
-                </h3>
+                </h3></a>
                 <p>Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog.</p>
             </div>
         </div>
