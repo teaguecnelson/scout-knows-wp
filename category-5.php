@@ -29,12 +29,8 @@ function sk_do_post_title_after() {
    echo '</div>';
 }
 
-// Adding img to top of category pages
+// Adding three up subcategories section
 add_action( 'genesis_after_header', 'wpsitesdotnet_category_archives_image_t', 25);
-/** 
-* @author Brad Dalton - WP Sites 
-* @example http://wpsites.net/web-design/display-image-on-all-category-pages/ 
-*/
 function wpsitesdotnet_category_archives_image_t () {
 if (is_category() && !is_paged() ) {
 echo '
@@ -45,30 +41,29 @@ echo '
         </h2>
         <div class="three-up-home-top">
             <div class="three-up-top-section">
-                <a href="/gear/essentials/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/Essentials.jpg">
+                <a href="/gear/essentials/"><img alt="man with small dog in harnes on street" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/Essentials.jpg">
                 <h3 class="three-up-top-section-title">
-                    Essentials
+                    Essentials >
                 </h3></a>
-                <p>Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog.</p>
+                <p>The basic things every dog owner should have for their dog.</p>
             </div>
                 <div class="three-up-top-section">
-                    <a href="/gear/interesting-finds/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/I-Finds.jpg">
+                    <a href="/gear/interesting-finds/"><img alt="dog with superman costume on" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/I-Finds.jpg">
                 <h3 class="three-up-top-section-title">
-                    Interesting Finds
+                    Interesting Finds >
                 </h3></a>
-                <p>Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog.</p>
+                <p>The non-essentials, but well worth looking thorough!</p>
             </div>
                 <div class="three-up-top-section">
-                <a href="/gear/playtime/"><img alt="" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/Playtime.jpg">
+                <a href="/gear/playtime/"><img alt="two dogs running in the water with a frisbee" src="https://s3.amazonaws.com/scoutknows-web-production/wp-content/uploads/2018/11/Playtime.jpg">
                 <h3 class="three-up-top-section-title">
-                    Playtime
+                    Playtime >
                 </h3></a>
-                <p>Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog. Find the essentials to get up and running with your dog.</p>
+                <p>All things toys and paytime. This is dog excitement zone 101!</p>
             </div>
         </div>
     </div>
 </div>';
- 
   }
 }
 

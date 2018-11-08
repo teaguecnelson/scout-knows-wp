@@ -29,12 +29,8 @@ function sk_do_post_title_after() {
    echo '</div>';
 }
 
-// Adding img to top of category pages
+// Adding three up subcategories section
 add_action( 'genesis_after_header', 'wpsitesdotnet_category_archives_image_t', 25);
-/** 
-* @author Brad Dalton - WP Sites 
-* @example http://wpsites.net/web-design/display-image-on-all-category-pages/ 
-*/
 function wpsitesdotnet_category_archives_image_t () {
 if (is_category() && !is_paged() ) {
 echo '
